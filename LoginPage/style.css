@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(63, 94, 251), rgb(252, 70, 107));
+}
+
+main {
+    display: grid;
+    height: 90vh;
+    place-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 8vh;
+    width: 100vw;
+    background-color: white;
+    padding-right: 1rem;
+}
+
+.navbar p {
+    font-size: smaller;
+    font-weight: 600;
+}
+
+.navbar img {
+    height: 59px;
+}
+
+.navbar button {
+    margin-right: 7rem;
+    padding: 3px 20px;
+    border-radius: 1.3rem;
+    background-color: grey;
+    color: white;
+}
+
+/* Login Box Styling */
+.loginBox {
+    background-color: white;
+    height: 80vh;
+    width: 25vw;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.loginBox h1 {
+    margin: 3rem 0;
+    font-weight: 900;
+}
+
+.input input {
+    border: none;
+    border-width: 3rem;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    color: #333;
+    transition: 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.input input:focus {
+    border-bottom: 2px solid rgb(63, 94, 251);
+    color: rgb(63, 94, 251); /* Change text color on focus */
+}
+
+.input {
+    display: flex;
+    padding: 0 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input button {
+    border: none;
+    margin-top: 3rem;
+    padding: 1rem 0.5rem;
+    border-radius: 16px;
+    background-color: rgb(211, 211, 211);
+    color: white;
+    font-size: medium;
+    font-weight: 550;
+}
+
+.input button:hover {
+    background-color:rgb(63, 94, 251);
+    transition-duration: 1s;
+}
+
+.input #forgetPassword {
+    font-size: small;
+    margin-left: 8rem;
+}
+
+.input a:hover {
+    color: rgb(63, 94, 251);
+    text-decoration: underline;
+}
+
+#prototype {
+    margin-top: 6rem;
+    font-size: smaller;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding-right: 0.5rem;
+    }
+
+    .navbar img {
+        height: 40px;
+    }
+
+    .navbar button {
+        margin-right: 2rem;
+        padding: 3px 10px;
+    }
+
+    .loginBox {
+        width: 80vw;
+        height: auto;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .input {
+        padding: 0 2rem;
+    }
+
+    .input input {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .input button {
+        padding: 1rem;
+        font-size: 16px;
+    }
+
+    #forgetPassword {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #prototype {
+        margin-top: 3rem;
+    }
+}
+
+/* Media Query for Small Devices */
+@media (max-width: 480px) {
+    .navbar img {
+        height: 30px;
+    }
+
+    .navbar button {
+        margin-right: 1rem;
+        font-size: 12px;
+    }
+
+    .loginBox {
+        width: 90vw;
+    }
+
+    .input {
+        padding: 0 1rem;
+    }
+
+    .input input {
+        font-size: 14px;
+    }
+
+    .input button {
+        font-size: 14px;
+        padding: 0.8rem;
+    }
+}
